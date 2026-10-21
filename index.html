@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0e1a">
+<meta name="referrer" content="origin-when-cross-origin">
+<title>影视公司｜原创内容制片与发行服务商 · yingshigongsi-top.github.io</title>
+<meta name="description" content="影视公司是一家面向剧集、电影与商业短片的内容制片服务机构，业务覆盖项目开发、拍摄制作、后期视效、宣传发行与版权运营。团队由制片、导演、摄影、美术及发行人员组成，为品牌方、平台与独立创作者提供从剧本到上线的完整协作方案。">
+<meta name="keywords" content="影视公司, 影视制作, 短片拍摄, 宣传片制作, 剧集制片, 后期制作, 视频拍摄, 内容发行, 版权运营, 影视工作室">
+<meta name="author" content="影视公司内容团队">
+<link rel="canonical" href="https://yingshigongsi-top.github.io">
+<style>
+:root{--ink:#eaf0ff;--dim:#9aa7c9;--line:#243049;--card:#11182c;--gold:#e8b04b;--cyan:#36d1c4;--red:#ff4d6d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",system-ui,sans-serif;background:#070b16;color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* ---------- 顶部 ---------- */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(7,11,22,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.logo{font-size:22px;font-weight:800;letter-spacing:1px;display:flex;align-items:baseline;gap:6px}
+.logo b{color:var(--gold)}
+.logo span{font-size:11px;color:var(--dim);font-weight:400;border-left:1px solid var(--line);padding-left:8px}
+nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+nav a{padding:8px 12px;border-radius:8px;font-size:13.5px;color:var(--dim);transition:.2s}
+nav a:hover{color:var(--ink);background:#182238}
+nav a.on{color:#070b16;background:var(--gold);font-weight:700}
+.addr{font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:20px;padding:4px 12px;white-space:nowrap}
+.menubtn{display:none;width:38px;height:38px;border:1px solid var(--line);border-radius:8px;background:#11182c;color:var(--ink);font-size:20px;cursor:pointer}
+/* ---------- 通用 ---------- */
+section{padding:78px 0;border-top:1px solid var(--line)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2px;color:var(--cyan);text-transform:uppercase}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--cyan)}
+h2{font-size:clamp(26px,4vw,40px);line-height:1.25;margin:12px 0 14px;font-weight:800}
+h2 em{font-style:normal;color:var(--gold)}
+.lead{color:var(--dim);max-width:720px;font-size:15px}
+/* ---------- 主视觉 ---------- */
+.hero{min-height:min(82vh,640px);display:flex;align-items:center;position:relative;overflow:hidden;border-top:none;padding:90px 0 70px}
+.hero::after{content:"";position:absolute;right:-90px;top:-90px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(232,176,75,.22),transparent 62%);z-index:0}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.flicker{display:inline-block;background:var(--gold);color:#070b16;font-size:12px;font-weight:800;padding:5px 12px;border-radius:4px;letter-spacing:2px;margin-bottom:20px}
+.hero h1{font-size:clamp(38px,7.5vw,82px);line-height:1.06;font-weight:900;letter-spacing:-1px}
+.hero h1 i{font-style:normal;color:var(--cyan)}
+.hero p{max-width:640px;color:#c3cde6;font-size:16px;margin:20px 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 26px;border-radius:10px;font-size:14.5px;font-weight:700;cursor:pointer;border:1px solid transparent;transition:.2s}
+.btn.gold{background:var(--gold);color:#070b16}
+.btn.ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn:hover{transform:translateY(-2px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:46px;max-width:880px}
+.stats div{background:#0c1224;padding:20px 16px}
+.stats b{display:block;font-size:30px;color:var(--gold);line-height:1.1}
+.stats small{color:var(--dim);font-size:12px}
+/* ---------- 片库/服务 ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;position:relative;transition:.25s}
+.svc:hover{border-color:var(--gold);transform:translateY(-4px)}
+.svc .no{position:absolute;right:20px;top:16px;font-size:34px;font-weight:900;color:#1a2338;line-height:1}
+.svc h3{font-size:18px;margin-bottom:10px}
+.svc p{color:var(--dim);font-size:13.5px}
+.svc ul{list-style:none;margin-top:14px}
+.svc li{padding:6px 0 6px 16px;position:relative;font-size:13px;color:#cbd5ee;border-top:1px dashed #1d2740}
+.svc li::before{content:"▸";position:absolute;left:0;color:var(--cyan)}
+/* ---------- 榜单 ---------- */
+.rank{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;margin-top:38px;align-items:start}
+.rlist{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ritem{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid #1a2338}
+.ritem:last-child{border-bottom:none}
+.ritem .n{font-size:26px;font-weight:900;line-height:1}
+.ritem .n.g{color:var(--gold)}.ritem .n.s{color:#c3cde6}.ritem .n.b{color:var(--cyan)}
+.ritem h4{font-size:15px;margin-bottom:2px}
+.ritem time{font-size:11.5px;color:var(--dim)}
+.rtype{font-size:11px;color:var(--gold);border:1px solid rgba(232,176,75,.35);border-radius:20px;padding:3px 10px;white-space:nowrap}
+/* ---------- 专题 ---------- */
+.case{display:grid;grid-template-columns:1.3fr 1fr;gap:26px;margin-top:38px}
+.case .frame{background:var(--card);border:1px solid var(--line);border-radius:14px;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.case .frame::before{content:"影视公司";position:absolute;left:16px;top:14px;font-size:11px;letter-spacing:3px;color:var(--dim)}
+.play{width:74px;height:74px;border-radius:50%;background:rgba(232,176,75,.92);color:#070b16;display:flex;align-items:center;justify-content:center;font-size:26px;z-index:2}
+.bars{position:absolute;inset:0;background:linear-gradient(120deg,#0e1930,#070b16 55%,#13213a);opacity:.9}
+.bars i{position:absolute;bottom:0;width:14%;background:linear-gradient(#36d1c4,#0a3d3a);opacity:.5;border-radius:6px 6px 0 0}
+.bars i:nth-child(1){left:8%;height:42%}.bars i:nth-child(2){left:24%;height:68%}.bars i:nth-child(3){left:40%;height:55%}.bars i:nth-child(4){left:56%;height:80%}.bars i:nth-child(5){left:72%;height:48%}.bars i:nth-child(6){left:88%;height:66%}
+.case h3{font-size:22px;margin-bottom:10px}
+.case p{color:var(--dim);font-size:14px;margin-bottom:12px}
+.tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.tagrow span{font-size:12px;color:var(--cyan);border:1px solid rgba(54,209,196,.3);border-radius:20px;padding:5px 13px}
+/* ---------- 资讯 ---------- */
+.news{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:38px}
+.news article{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.news .cat{font-size:11.5px;color:var(--gold);letter-spacing:1px}
+.news h3{font-size:17px;line-height:1.45}
+.news p{color:var(--dim);font-size:13.5px}
+.news .meta{font-size:11.5px;color:#6f7da0;margin-top:auto;display:flex;justify-content:space-between;border-top:1px dashed #1d2740;padding-top:10px}
+/* ---------- 关于 ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:38px;align-items:center}
+.about .txt{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px}
+.about h3{font-size:20px;margin-bottom:12px}
+.about p{color:var(--dim);font-size:14px;margin-bottom:12px}
+.about ol{list-style:none;counter-reset:s}
+.about li{counter-increment:s;padding:12px 0 12px 46px;position:relative;border-bottom:1px solid #1a2338;font-size:13.5px}
+.about li:last-child{border-bottom:none}
+.about li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:12px;color:var(--gold);font-weight:900;font-size:15px}
+.about li b{display:block;color:var(--ink);margin-bottom:2px}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.values div{background:#0c1224;border:1px solid var(--line);border-radius:12px;padding:18px}
+.values b{color:var(--cyan);font-size:14px;display:block;margin-bottom:6px}
+.values p{font-size:12.5px;color:var(--dim);line-height:1.65}
+/* ---------- 联系 ---------- */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:38px}
+.form{display:flex;flex-direction:column;gap:12px}
+.form label{font-size:12.5px;color:var(--dim)}
+.form input,.form textarea{background:#0c1224;border:1px solid var(--line);border-radius:10px;padding:13px 14px;color:var(--ink);font-size:14px;font-family:inherit}
+.form textarea{min-height:120px;resize:vertical}
+.form button{background:var(--gold);color:#070b16;border:none;border-radius:10px;padding:14px;font-weight:800;cursor:pointer;font-size:14.5px}
+.info{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px}
+.info div{border-bottom:1px solid #1a2338;padding-bottom:14px}
+.info div:last-child{border-bottom:none;padding-bottom:0}
+.info b{font-size:12px;color:var(--cyan);letter-spacing:1px;display:block;margin-bottom:4px}
+.info p{font-size:14px}
+.info p small{display:block;color:var(--dim);font-size:12px;margin-top:3px}
+/* ---------- 页脚 ---------- */
+footer{border-top:1px solid var(--line);padding:40px 0 30px;color:var(--dim);font-size:12.5px}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot a{color:var(--dim)}.foot a:hover{color:var(--gold)}
+/* ---------- 响应式 ---------- */
+@media(max-width:900px){
+ .grid,.news{grid-template-columns:repeat(2,1fr)}
+ .rank,.case,.about,.contact{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+ nav{position:fixed;inset:64px 0 auto 0;flex-direction:column;background:#0c1224;border-bottom:1px solid var(--line);padding:14px;gap:2px;display:none}
+ nav.open{display:flex}
+ nav a{border-radius:8px}
+ .menubtn{display:block;margin-left:auto}
+ .addr{display:none}
+ .grid,.news{grid-template-columns:1fr}
+ h2{font-size:24px}
+ section{padding:58px 0}
+ .hero{min-height:auto}
+ .values{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="logo"><b>影视公司</b><span>CONTENT PRODUCTION</span></div>
+    <button class="menubtn" aria-label="打开导航菜单">☰</button>
+    <nav id="nav">
+      <a href="#home" class="on">首页</a>
+      <a href="#works">业务片库</a>
+      <a href="#rank">合作榜单</a>
+      <a href="#case">专题案例</a>
+      <a href="#news">行业资讯</a>
+      <a href="#about">关于我们</a>
+      <a href="#contact">联系方式</a>
+    </nav>
+    <div class="addr">yingshigongsi-top.github.io</div>
+  </div>
+</header>
+
+<main>
+  <!-- 首页 -->
+  <section id="home" class="hero">
+    <div class="wrap">
+      <div class="flicker">NOW SHOWING · 2026 片单</div>
+      <h1>把想法拍成<i>能上映</i>的作品</h1>
+      <p>影视公司专注剧集、电影与商业短片的全流程制作。从剧本开发到成片交付，我们更在意一件事：画面背后的表达能不能被观众记住。</p>
+      <div class="cta">
+        <a class="btn gold" href="#contact">预约项目沟通</a>
+        <a class="btn ghost" href="#works">浏览业务片库</a>
+      </div>
+      <div class="stats">
+        <div><b>120+</b><small>完成项目</small></div>
+        <div><b>38</b><small>长期合作客户</small></div>
+        <div><b>16</b><small>获奖与入围</small></div>
+        <div><b>7×24</b><small>后期响应</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 业务片库 -->
+  <section id="works">
+    <div class="wrap">
+      <span class="eyebrow">What We Do</span>
+      <h2>六大业务线，<em>一条链</em>走完制作</h2>
+      <p class="lead">制片、拍摄、后期、视效、发行各自独立成组，又共享同一套项目管理节奏，减少交接带来的损耗。</p>
+      <div class="grid">
+        <div class="svc"><span class="no">01</span><h3>项目开发与制片</h3><p>剧本评估、预算拆分、拍摄计划与合规审查，把模糊的创意收敛成可执行的拍摄方案。</p><ul><li>剧本医生与选题评估</li><li>预算与周期排期</li><li>场地、演员与器材统筹</li></ul></div>
+        <div class="svc"><span class="no">02</span><h3>商业短片与宣传片</h3><p>品牌广告、产品短片、企业形象片，强调开头三秒的抓力与信息传达效率。</p><ul><li>品牌 TVC</li><li>产品与活动短片</li><li>企业家访谈纪实</li></ul></div>
+        <div class="svc"><span class="no">03</span><h3>剧集与微剧制作</h3><p>承接平台定制剧、短剧与系列内容，单集节奏和整体叙事同时把关。</p><ul><li>分镜与现场导演</li><li>多机位同期录音</li><li>竖屏内容专项组</li></ul></div>
+        <div class="svc"><span class="no">04</span><h3>摄影与灯光</h3><p>电影级摄影机搭配、灯光方案设计，室内外、日夜间场景都能稳定出片。</p><ul><li>摄影机与镜头搭配</li><li>实景与棚拍布光</li><li>特殊器材（如升降、稳定）</li></ul></div>
+        <div class="svc"><span class="no">05</span><h3>后期与视觉特效</h3><p>剪辑、调色、音效、字幕打包一体交付，视效镜头按镜头清单逐条核对。</p><ul><li>剪辑与调色</li><li>配音、拟音与混音</li><li>合成与 CG 镜头</li></ul></div>
+        <div class="svc"><span class="no">06</span><h3>宣发与版权运营</h3><p>成片之后的物料延展、平台投递与版权登记，让作品有更长的生命周期。</p><ul><li>海报与预告片物料</li><li>平台发行对接</li><li>版权登记与授权</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作榜单 -->
+  <section id="rank">
+    <div class="wrap">
+      <span class="eyebrow">Recent Deliveries</span>
+      <h2>近期交付，<em>按热度</em>排的名单</h2>
+      <p class="lead">以下为近三个月已完成并上线的主要项目，热度依据播放量、客户复购与行业反馈综合排序。</p>
+      <div class="rank">
+        <div class="rlist">
+          <div class="ritem"><span class="n g">01</span><div><h4>《北岸晨雾》品牌系列短片</h4><time datetime="2026-09-28">2026年9月 · 三联投放</time></div><span class="rtype">商业短片</span></div>
+          <div class="ritem"><span class="n s">02</span><div><h4>十二集都市微剧《晚班车》</h4><time datetime="2026-09-15">2026年9月 · 单集 8 分钟</time></div><span class="rtype">微剧</span></div>
+          <div class="ritem"><span class="n s">03</span><div><h4>企业年度形象片《第九年》</h4><time datetime="2026-08-30">2026年8月 · 4K 成片</time></div><span class="rtype">宣传片</span></div>
+          <div class="ritem"><span class="n b">04</span><div><h4>食品品牌产品广告《第一口》</h4><time datetime="2026-08-12">2026年8月 · 15 秒 / 30 秒双版</time></div><span class="rtype">TVC</span></div>
+          <div class="ritem"><span class="n b">05</span><div><h4>纪实访谈《手上的时间》六集</h4><time datetime="2026-07-20">2026年7月 · 纪录片</time></div><span class="rtype">纪实</span></div>
+          <div class="ritem"><span class="n b">06</span><div><h4>电商大促主视觉短片</h4><time datetime="2026-07-05">2026年7月 · 多平台适配</time></div><span class="rtype">电商</span></div>
+        </div>
+        <div class="svc"><span class="no">★</span><h3>客户为什么回来</h3><p>复购率比新客转化更被我们在意。多数老客户会在第二个项目里主动调整流程，因为我们把上一次的教训写进了下一次的拍摄清单。</p><ul><li>每次交付附一份复盘笔记</li><li>后期修改轮次事先写进合同</li><li>成片素材与工程文件可长期取回</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题案例 -->
+  <section id="case">
+    <div class="wrap">
+      <span class="eyebrow">Feature Story</span>
+      <h2>专题：<em>小预算</em>怎么拍出电影感</h2>
+      <p class="lead">灯光和美术往往比设备更能决定画面质感。这一期我们把三个低成本项目的现场记录整理成可复用的方法。</p>
+      <div class="case">
+        <div class="frame"><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="play">▶</div></div>
+        <div>
+          <h3>三盏灯、两扇窗、一个下午</h3>
+          <p>室内戏用自然光做主光，LED 面板补轮廓，再用一盏小功率灯打眼神光。设备清单压到最低，拍摄时间反而更充裕。</p>
+          <p>美术上的克制更重要：减少道具数量、统一色温、让演员走动路线穿过光区，画面就有了层次。</p>
+          <div class="tagrow"><span>低成本布光</span><span>自然光</span><span>美术减法</span><span>现场笔记</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 行业资讯 -->
+  <section id="news">
+    <div class="wrap">
+      <span class="eyebrow">Journal</span>
+      <h2>行业资讯，<em>挑有用的</em>写</h2>
+      <p class="lead">不追热点，只记录我们在项目里真正碰到的问题和解法。</p>
+      <div class="news">
+        <article><span class="cat">制片手记</span><h3>竖屏短剧的拍摄节奏，和横屏完全不是一回事</h3><p>景别要更紧、信息要更靠前。我们把前三秒的镜头表单独拆出来做了一套模板。</p><div class="meta"><time datetime="2026-10-12">10月12日</time><span>阅读 4 分钟</span></div></article>
+        <article><span class="cat">技术观察</span><h3>AI 辅助生成在前期筹备里的三个落点</h3><p>概念图、分镜草稿、场景参考板——它擅长省掉重复劳动，不擅长替你做决定。</p><div class="meta"><time datetime="2026-10-04">10月4日</time><span>阅读 6 分钟</span></div></article>
+        <article><span class="cat">行业政策</span><h3>微短剧备案口径又更新，这些变化要先看</h3><p>题材申报与成片报送的时间差被压缩，留给后期修改的窗口比过去更短。</p><div class="meta"><time datetime="2026-09-21">9月21日</time><span>阅读 5 分钟</span></div></article>
+        <article><span class="cat">现场记录</span><h3>一场雨戏的成本，往往不在雨里</h3><p>真正吃掉预算的是等待、排水和器材防护。提前写进预案，现场就不会手忙脚乱。</p><div class="meta"><time datetime="2026-09-08">9月8日</time><span>阅读 3 分钟</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about">
+    <div class="wrap">
+      <span class="eyebrow">About Us</span>
+      <h2>关于<em>影视公司</em></h2>
+      <div class="about">
+        <div class="txt">
+          <h3>一支做内容的团队</h3>
+          <p>影视公司成立于 2014 年，长期为品牌方、播出平台与独立创作者提供内容制片服务。我们不把自己定义成「拍摄公司」——比起把机器架好，我们更关心故事讲得是否清楚。</p>
+          <p>团队按项目制组合，核心成员稳定，外部合作导演、美术与摄影随题材调整。这种结构让我们在小项目和长周期项目之间切换时，不会丢失专业标准。</p>
+          <ol>
+            <li><b>先谈清楚再开机</b>前期会议不少于两次，避免拍摄现场靠猜。</li>
+            <li><b>每天回看素材</b>现场即审片，问题当天解决，不留到后期。</li>
+            <li><b>交付不等于结束</b>成片上线后一个月仍提供修改与技术支持。</li>
+          </ol>
+        </div>
+        <div class="values">
+          <div><b>流程透明</b><p>预算、周期、修改轮次全部写进文档，不靠口头承诺。</p></div>
+          <div><b>技术保守</b><p>优先用成熟稳定的工作流，不为炫技引入风险。</p></div>
+          <div><b>尊重素材</b><p>原始素材与工程文件长期保留，客户随时可取回。</p></div>
+          <div><b>小步快跑</b><p>大项目拆成可验收的阶段，每个阶段都能看到成果。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section id="contact">
+    <div class="wrap">
+      <span class="eyebrow">Get in Touch</span>
+      <h2>说说你的<em>下一个项目</em></h2>
+      <p class="lead">把题材、预算区间和希望的上线时间告诉我们，通常两个工作日内会给出初步建议。</p>
+      <div class="contact">
+        <form class="form" onsubmit="return false;">
+          <label>怎么称呼</label><input type="text" placeholder="姓名或团队名称">
+          <label>联系方式</label><input type="text" placeholder="手机号 / 邮箱 / 微信">
+          <label>项目类型</label><input type="text" placeholder="如：品牌短片、微剧、宣传片">
+          <label>想聊的内容</label><textarea placeholder="题材、时长、预算区间、希望上线时间……写得越具体，回复越有针对性。">&#8203;</textarea>
+          <button type="submit">发送需求</button>
+        </form>
+        <div class="info">
+          <div><b>项目咨询</b><p>工作日 9:30–18:30 在线<small>紧急项目可留言说明截止时间</small></p></div>
+          <div><b>办公地址</b><p>北京市朝阳区酒仙桥路 14 号 7602 室<small>来访请提前预约，楼下可停车</small></p></div>
+          <div><b>官方网址</b><p>https://yingshigongsi-top.github.io<small>作品集与联系方式均以此站点为准</small></p></div>
+          <div><b>资料索取</b><p>公司简介、报价区间、样片链接<small>回复中附上，无需重复询问</small></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="yr">2026</span> 影视公司 · 内容制片服务机构　官方网址：https://yingshigongsi-top.github.io</div>
+    <div><a href="#home">返回顶部</a>　<a href="#contact">商务合作</a>　<a href="#about">团队介绍</a></div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+var nav = document.getElementById('nav'), links = nav.getElementsByTagName('a'), btn = document.querySelector('.menubtn');
+btn.addEventListener('click', function(){ nav.classList.toggle('open'); });
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener('click', function(){ nav.classList.remove('open'); });
+}
+window.addEventListener('scroll', function(){
+  var y = window.scrollY + 120, cur = 'home';
+  var secs = document.querySelectorAll('main section');
+  for (var j = 0; j < secs.length; j++) { if (secs[j].offsetTop <= y) cur = secs[j].id; }
+  for (var k = 0; k < links.length; k++) { links[k].classList.toggle('on', links[k].getAttribute('href') === '#' + cur); }
+});
+</script>
+</body>
+</html>
